@@ -1,0 +1,51 @@
+# --- Python / environments ---
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# --- Secrets (keep the template) ---
+.env
+.env.*
+!.env.example
+
+# --- Docs / notes (README stays) ---
+*.md
+!README.md
+docs/
+features-defenitions.html
+W16-4123.pdf
+*.pptx
+
+# --- Data (Dundee corpus + Penn Treebank are licensed; never push) ---
+data/*
+*.parquet
+*.tsv
+!data/wiki_pairs.example.tsv
+
+# --- Generated outputs / models ---
+build/
+models/
+experiments/
+experiments_mtp/
+logs/
+*.pkl
+*.joblib
+*.pt
+*.bin
+*.safetensors
+
+# --- Tool / editor / OS ---
+.idea/
+.vscode/
+.archify/
+.xgrok/
+.claude/
+.DS_Store

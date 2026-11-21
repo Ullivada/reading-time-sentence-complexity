@@ -1,0 +1,27 @@
+corpus_root: data/dundee_corpus
+build_dir: build
+models_dir: models
+experiments_dir: experiments
+
+random_seed: 42
+train_ratio: 0.6   # paper Sec 3.1: 60/20/20 sentence-level split
+dev_ratio: 0.2
+
+# candidate thresholds (ms) tuned on dev; paper picked FFD 84, FPD 88, RPD 91, TD 98
+threshold_grid_ms:
+  ffd: [0, 50, 60, 70, 80, 84, 90, 100]
+  fpd: [0, 60, 70, 80, 88, 100]
+  rpd: [0, 70, 80, 91, 100]
+  td: [0, 80, 90, 98, 110]
+
+min_pooled_td_ms: 0.0   # keep every annotated word, incl. words no subject fixated
+
+# incremental PCFG parser beam width (states kept per word)
+parser_beam_dundee: 100
+parser_beam_wiki: 20    # smaller beam: 235k sentences
+parser_jobs: 8          # parallel parser processes
+
+# System 2 (Wikipedia pair readability)
+wiki_pairs_path: data/wiki_pairs_hwang_good.tsv
+s2_n_folds: 10
+# s2_max_pairs: 5000   # uncomment to cap pairs for a quick run

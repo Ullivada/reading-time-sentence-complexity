@@ -1,0 +1,6 @@
+# main-mtp.py and app.py (tested with torch 2.14, transformers 5.20, streamlit 1.66, scipy 1.17)
+-r requirements.txt
+torch>=2.2
+transformers>=4.40
+streamlit>=1.40
+scipy>=1.10

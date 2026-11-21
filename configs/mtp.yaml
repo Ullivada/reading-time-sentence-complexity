@@ -1,0 +1,19 @@
+# main-mtp.py settings, loaded on top of configs/default.yaml (shared: corpus_root,
+# wiki_pairs_path, random_seed, train/dev ratios, threshold_grid_ms, s2_n_folds).
+build_dir: build/mtp
+models_dir: models/mtp
+experiments_dir: experiments_mtp
+
+lm_name: gpt2            # GPT-2 small (124M); larger LMs fit reading times worse
+lm_batch_tokens: 1024    # GPT-2 tokens per Wikipedia batch (bigger is not faster on an M2)
+
+s2_test_ratio: 0.2       # fixed pair split for the transformer rows; dev 0.2, train the rest
+s2_dev_ratio: 0.2
+four_measure_row: true   # System 2 row: FFD+FPD+RPD+TD per word
+
+ce_model: roberta-base
+ce_max_len: 128
+ce_batch_size: 32
+ce_epochs: 3
+ce_lr: 2.0e-5
+ce_max_train_pairs: null # cap training pairs for a faster laptop run, e.g. 30000

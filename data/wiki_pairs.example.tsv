@@ -1,0 +1,3 @@
+sentence_standard	sentence_simple	label	pair_id
+The rate of evaporation is lower when humidity is high.	Under conditions of high humidity, the rate of evaporation of sweat from the skin decreases.	1	pair_example_1
+This is a standard Wikipedia style sentence.	This is a simple style sentence.	1	pair_example_2
