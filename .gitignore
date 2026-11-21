@@ -29,6 +29,7 @@ data/*
 *.parquet
 *.tsv
 !data/wiki_pairs.example.tsv
+!data/README.md
 
 # --- Generated outputs / models ---
 build/
